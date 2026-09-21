@@ -1669,3 +1669,10 @@ The next stage toward a deployable system would involve **multi-channel gateway 
 ---
 
 **Built as a prototype for exploring synchronized LoRa communication for underground monitoring applications.**
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+You are free to use, copy, modify, merge, publish, distribute, sublicense,
+and sell copies of the software, subject to the conditions of the MIT License.
