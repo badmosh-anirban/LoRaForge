@@ -219,11 +219,14 @@ header{
   align-items:flex-end;
   gap:20px;
   margin-bottom:25px;
+  position: relative;
 }
 .brand{
   display:flex;
   align-items:center;
   gap:14px;
+  flex: 1;
+  justify-content: center;
 }
 .logo{
   width:48px;
@@ -250,6 +253,8 @@ h1{
   text-align:right;
   color:var(--muted);
   font-size:.85rem;
+  position: absolute;
+  right: 20px;
 }
 .gateway-dot{
   display:inline-block;
@@ -522,7 +527,7 @@ canvas{
 
 <header>
   <div class="brand">
-    <div class="logo">⛏</div>
+    <!-- <div class="logo">⛏</div> -->
     <div>
       <h1>LoRaForge | Mine Monitoring</h1>
       <p class="subtitle">
