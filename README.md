@@ -11,6 +11,10 @@
 
 ---
 
+## <img src="images&videos/1.jpeg" alt="" width="80%"/>
+
+## <img src="images&videos/2.png" alt="" width="80%"/>
+
 ## Overview
 
 This project is a prototype communication architecture designed for **underground coal-mine monitoring(SIH26025)**, where multiple sensor nodes need to periodically send environmental and safety information to a central gateway.
@@ -1659,12 +1663,8 @@ The next stage toward a deployable system would involve **multi-channel gateway 
 
 ---
 
-## 📌 Repository Links
-
-- **Source Code:**
 - **Demo Video:** here
 - **Presentation:** here
-- **Project Problem Statement:** here
 
 ---
 

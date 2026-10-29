@@ -221,13 +221,17 @@ void initializeRadio() {
 
 void sendSync() {
     SyncPacket packet{};
+    //below 3 are for authentication
     packet.header.version = PROTOCOL_VERSION;
     packet.header.type = PKT_SYNC;
-    packet.header.nodeId = 0;
+    packet.header.nodeId = 0; //not used
     packet.header.gatewayId = GATEWAY_ID;
-    packet.header.sequence = 0;
-    packet.header.frameNumber = frameNumber;
-    packet.header.payloadLength = sizeof(packet.payload);
+
+    packet.header.sequence = 0; //prolly not used too
+    packet.header.frameNumber = frameNumber; //actually used by the node 
+    packet.header.payloadLength = sizeof(packet.payload); //prolly not used too
+    
+    // below 3 are unused
     packet.payload.slotDurationMs = SYNC_SLOT_DURATION_MS;
     packet.payload.guardTimeMs = SYNC_GUARD_TIME_MS;
     packet.payload.nodeCount = NODE_COUNT;
@@ -275,7 +279,7 @@ void processDataPacket() {
 
     NodeStatus &node = nodes[packet.header.nodeId - 1];
     bool newSensorAlert = (packet.payload.flame || packet.payload.vibration) &&
-                          (!node.sensor.flame && !node.sensor.vibration);
+                            (!node.sensor.flame && !node.sensor.vibration);
     if (node.seen && packet.header.sequence > node.lastSequence + 1) {
         node.packetsMissed += packet.header.sequence - node.lastSequence - 1;
     }
